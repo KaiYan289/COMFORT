@@ -6,11 +6,11 @@ from comfort_utils.model_utils import (
     LlavaWrapper,
     LlavaHfWrapper,
     LlavaGdWrapper,
-    BlipWrapper,
-    XComposerWrapper,
-    MiniCpmWrapper,
+    #BlipWrapper,
+    #XComposerWrapper,
+    #MiniCpmWrapper,
     # GLaMMWrapper,
-    GptWrapper,
+    #GptWrapper,
 )
 from comfort_utils.data_utils import CLEVR_generic
 from comfort_utils.helper import prompt_spatial, get_prompt_template
@@ -20,20 +20,20 @@ from tqdm import tqdm
 
 SUPPORTED_MODELS = [
     "liuhaotian/llava-v1.5-7b",
-    "liuhaotian/llava-v1.5-13b",
-    "Salesforce/blip2-opt-2.7b-coco",
-    "Salesforce/blip2-opt-6.7b-coco",
-    "Salesforce/instructblip-vicuna-7b",
-    "Salesforce/instructblip-vicuna-13b",
+    #"liuhaotian/llava-v1.5-13b",
+    #"Salesforce/blip2-opt-2.7b-coco",
+    #"Salesforce/blip2-opt-6.7b-coco",
+    #"Salesforce/instructblip-vicuna-7b",
+    #"Salesforce/instructblip-vicuna-13b",
     # "Haozhangcx/llava_grounding_gd_vp",
     # "xtuner/llava-llama-3-8b-transformers",
-    "internlm/internlm-xcomposer2-vl-7b",
-    "openbmb/MiniCPM-Llama3-V-2_5",
+    #"internlm/internlm-xcomposer2-vl-7b",
+    #"openbmb/MiniCPM-Llama3-V-2_5",
     # "OpenGVLab/InternVL-Chat-V1-5",
-    "remyxai/SpaceLLaVA",
-    "MBZUAI/GLaMM-FullScope",
-    "GPT-4o",
-    "Gregor/mblip-bloomz-7b",
+    #"remyxai/SpaceLLaVA",
+    #"MBZUAI/GLaMM-FullScope",
+    #"GPT-4o",
+    #"Gregor/mblip-bloomz-7b",
 ]
 
 parser = ArgumentParser()
@@ -178,7 +178,7 @@ else:
 
 results["dataset_type"] = dataset_type
 results["dataset_type_full"] = dataset_type_full
-results["model"] = model_name
+results["model"] = model_name 
 
 spatial_relationship_types = sorted(list(os.listdir(dataset_path_root)))
 print("spatial_relationship_types:", spatial_relationship_types)
